@@ -1,5 +1,5 @@
 #!/bin/bash
 
 yay -S --noconfirm --needed \
-  clang llvm mise \
+  cargo clang llvm mise \
   lazygit
