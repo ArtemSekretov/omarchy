@@ -7,11 +7,11 @@ alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
 alias cd="zd"
 zd() {
   if [ $# -eq 0 ]; then
-    builtin cd ~ && return
+    builtin cd ~ && ls && printf " \U000F17A9 " && pwd && return
   elif [ -d "$1" ]; then
-    builtin cd "$1"
+    builtin cd "$1" && ls && printf " \U000F17A9 " && pwd
   else
-    z "$@" && printf " \U000F17A9 " && pwd || echo "Error: Directory not found"
+    z "$@" && ls && printf " \U000F17A9 " && pwd || echo "Error: Directory not found"
   fi
 }
 open() {
