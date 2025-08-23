@@ -50,3 +50,13 @@ transcode-video-4K() {
 transcode-png2jpg() {
   magick $1 -quality 95 -strip ${1%.*}.jpg
 }
+
+# Automatically do an ls after each cd, z, or zoxide
+cd ()
+{
+	if [ -n "$1" ]; then
+		builtin cd "$@" && ls
+	else
+		builtin cd ~ && ls
+	fi
+}

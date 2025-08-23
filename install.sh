@@ -70,7 +70,8 @@ source $OMARCHY_INSTALL/desktop/printer.sh
 # Apps
 show_logo expand
 show_subtext "Installing default applications [4/5]"
-# source $OMARCHY_INSTALL/apps/webapps.sh
+source $OMARCHY_INSTALL/apps/my_webapps.sh
+source $OMARCHY_INSTALL/apps/my_staff.sh
 # source $OMARCHY_INSTALL/apps/xtras.sh
 source $OMARCHY_INSTALL/apps/mimetypes.sh
 
