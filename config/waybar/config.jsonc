@@ -18,7 +18,8 @@
     "network",
     "pulseaudio",
     "cpu",
-    "battery"
+    "battery",
+    "hyprland/language"
   ],
   "hyprland/workspaces": {
     "on-click": "activate",
@@ -138,5 +139,11 @@
   "tray": {
     "icon-size": 12,
     "spacing": 12
+  },
+  "hyprland/language": {
+    "format": "{}",
+    "format-ru": "ru",
+    "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next",
+    "format-en": "us"
   }
 }
