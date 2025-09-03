@@ -37,6 +37,7 @@ sudo pacman -S --noconfirm --needed \
   impala \
   imv \
   inetutils \
+  iwd \
   kvantum-qt5 \
   lazygit \
   less \
@@ -61,6 +62,7 @@ sudo pacman -S --noconfirm --needed \
   python-gobject \
   python-poetry-core \
   python-terminaltexteffects \
+  qt5-wayland \
   ripgrep \
   satty \
   slurp \
@@ -71,9 +73,9 @@ sudo pacman -S --noconfirm --needed \
   system-config-printer \
   tldr \
   ttf-cascadia-mono-nerd \
-  ttf-font-awesome \
   ttf-ia-writer \
-  ttf-jetbrains-mono \
+  ttf-jetbrains-mono-nerd \
+
   tzupdate \
   ufw \
   unzip \
@@ -87,6 +89,7 @@ sudo pacman -S --noconfirm --needed \
   wl-clip-persist \
   wl-clipboard \
   wl-screenrec \
+  woff2-font-awesome \
   xdg-desktop-portal-gtk \
   xdg-desktop-portal-hyprland \
   yaru-icon-theme \
