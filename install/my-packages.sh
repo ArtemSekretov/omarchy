@@ -93,9 +93,6 @@ sudo pacman -S --noconfirm --needed \
   yay \
   zoxide
 
-
 sudo pacman -Sy --noconfirm --needed \
   helix network-manager-sstp wine
   
-yay -S --noconfirm --needed \
-   unityhub jetbrains-toolbox bcompare winetricks
