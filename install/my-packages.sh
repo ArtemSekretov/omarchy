@@ -8,7 +8,6 @@ sudo pacman -S --noconfirm --needed \
   blueberry \
   brightnessctl \
   btop \
-  cargo \
   clang \
   cups \
   cups-browsed \
