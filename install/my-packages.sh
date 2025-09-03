@@ -8,7 +8,6 @@ sudo pacman -S --noconfirm --needed \
   blueberry \
   brightnessctl \
   btop \
-  cargo \
   clang \
   cups \
   cups-browsed \
@@ -76,7 +75,6 @@ sudo pacman -S --noconfirm --needed \
   ttf-cascadia-mono-nerd \
   ttf-ia-writer \
   ttf-jetbrains-mono-nerd \
-
   tzupdate \
   ufw \
   unzip \
