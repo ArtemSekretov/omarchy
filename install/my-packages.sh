@@ -8,7 +8,6 @@ sudo pacman -S --noconfirm --needed \
   blueberry \
   brightnessctl \
   btop \
-  clang \
   cups \
   cups-browsed \
   cups-filters \
@@ -22,7 +21,6 @@ sudo pacman -S --noconfirm --needed \
   fcitx5-qt \
   fd \
   fzf \
-  gcc14 \
   gnome-keyring \
   gnome-themes-extra \
   gum \
@@ -97,7 +95,7 @@ sudo pacman -S --noconfirm --needed \
 
 
 sudo pacman -Sy --noconfirm --needed \
-  helix network-manager-sstp wine winetricks
+  helix network-manager-sstp wine
   
 yay -S --noconfirm --needed \
-   unityhub jetbrains-toolbox bcompare
+   unityhub jetbrains-toolbox bcompare winetricks
