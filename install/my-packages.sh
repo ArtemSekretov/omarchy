@@ -32,7 +32,6 @@ sudo pacman -S --noconfirm --needed \
   hyprshot \
   hyprsunset \
   imagemagick \
-  impala \
   imv \
   inetutils \
   iwd \
