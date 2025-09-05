@@ -1,0 +1,10 @@
+#!/bin/bash
+
+CLASS="$1"
+shift 
+
+if hyprctl clients | grep -q "class: $CLASS"; then
+  hyprctl dispatch focuswindow "class:$CLASS"
+else
+  "$@"
+fi
