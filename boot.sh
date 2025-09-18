@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Set install mode to online since boot.sh is used for curl installations
+export OMARCHY_ONLINE_INSTALL=true
+
 ansi_art='                 ▄▄▄                                                   
  ▄█████▄    ▄███████████▄    ▄███████   ▄███████   ▄███████   ▄█   █▄    ▄█   █▄ 
 ███   ███  ███   ███   ███  ███   ███  ███   ███  ███   ███  ███   ███  ███   ███
@@ -24,7 +27,7 @@ rm -rf ~/.local/share/omarchy/
 git clone "https://github.com/${OMARCHY_REPO}.git" ~/.local/share/omarchy >/dev/null
 
 # Use custom branch if instructed
-cd ~/.local/share/omarchy
+sscd ~/.local/share/omarchy
 git fetch origin my_omarchy && git checkout my_omarchy
 cd -
 
