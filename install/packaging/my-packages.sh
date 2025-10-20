@@ -13,6 +13,19 @@ sudo pacman -S --noconfirm --needed \
   cups-filters \
   cups-pdf \
   dust \
+  elephant \
+  elephant-bluetooth \
+  elephant-calc \
+  elephant-clipboard \
+  elephant-desktopapplications \
+  elephant-files \
+  elephant-menus \
+  elephant-providerlist \
+  elephant-runner \
+  elephant-symbols \
+  elephant-todo \
+  elephant-unicode \
+  elephant-websearch \
   evince \
   eza \
   fastfetch \
@@ -23,13 +36,13 @@ sudo pacman -S --noconfirm --needed \
   fzf \
   gnome-keyring \
   gnome-themes-extra \
+  gpu-screen-recorder \
   gum \
   hypridle \
   hyprland \
   hyprland-qtutils \
   hyprlock \
   hyprpicker \
-  hyprshot \
   hyprsunset \
   imagemagick \
   imv \
@@ -78,13 +91,10 @@ sudo pacman -S --noconfirm --needed \
   uwsm \
   walker-bin \
   waybar \
-  wf-recorder \
   whois \
   wiremix \
   wireplumber \
-  wl-clip-persist \
   wl-clipboard \
-  wl-screenrec \
   woff2-font-awesome \
   xdg-desktop-portal-gtk \
   xdg-desktop-portal-hyprland \
@@ -94,4 +104,4 @@ sudo pacman -S --noconfirm --needed \
 
 sudo pacman -Sy --noconfirm --needed \
   helix network-manager-sstp wine
-  
+
