@@ -1,4 +1,4 @@
 #!/bin/bash
 
 rfkill unblock wifi
-omarchy-launch-or-focus-tui nmtui
+exec setsid uwsm-app -- xdg-terminal-exec --app-id=org.omarchy.impala -e nmtui "$@"
