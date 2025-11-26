@@ -20,25 +20,27 @@ height=${2:-900}
 x=${3:-}
 y=${4:-}
 
-
 active=$(hyprctl activewindow -j)
-pinned=$(echo "$active" | jq .pinned)
-addr=$(echo "$active" | jq -r  ".address")
-[ -z "$addr" ] && { echo "No active window"; exit 0; }
+pinned=$(echo "$active" | jq ".pinned")
+addr=$(echo "$active" | jq -r ".address")
 
-if [ "$pinned" = "true" ]; then
+if [[ $pinned == "true" ]]; then
   hyprctl -q --batch \
-  "dispatch pin address:$addr;" \
-  "dispatch togglefloating address:$addr;" \
-  "dispatch tagwindow -pop address:$addr;"
-else
+    "dispatch pin address:$addr;" \
+    "dispatch togglefloating address:$addr;" \
+    "dispatch tagwindow -pop address:$addr;"
+elif [[ -n $addr ]]; then
+  hyprctl dispatch togglefloating address:$addr
+  hyprctl dispatch resizeactive exact $width $height address:$addr
+
+  if [[ -n $x && -n $y ]]; then
+    hyprctl dispatch moveactive $x $y address:$addr
+  else
+    hyprctl dispatch centerwindow address:$addr
+  fi
+
   hyprctl -q --batch \
-  "dispatch togglefloating address:$addr;" \
-  "dispatch resizeactive exact $width $height address:$addr;" \
-  "dispatch centerwindow address:$addr;" \
-  "dispatch pin address:$addr;" \
-  "dispatch alterzorder top address:$addr;" \
-  "dispatch tagwindow +pop address:$addr;"
+    "dispatch pin address:$addr;" \
+    "dispatch alterzorder top address:$addr;" \
+    "dispatch tagwindow +pop address:$addr;"
 fi
-
-
