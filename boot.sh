@@ -31,5 +31,12 @@ cd ~/.local/share/omarchy
 git fetch origin my_omarchy && git checkout my_omarchy
 cd -
 
+# Set edge mirror for dev installs
+if [[ $OMARCHY_REF == "dev" ]]; then
+  export OMARCHY_MIRROR=edge
+else
+  export OMARCHY_MIRROR=stable
+fi
+
 echo -e "\nInstallation starting..."
 source ~/.local/share/omarchy/install.sh
