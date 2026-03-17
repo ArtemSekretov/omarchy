@@ -7,23 +7,30 @@ if command -v eza &> /dev/null; then
 fi
 
 alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
+alias eff='$EDITOR "$(ff)"'
 
 if command -v zoxide &> /dev/null; then
   alias cd="zd"
   zd() {
-    if [ $# -eq 0 ]; then
-      builtin cd ~ && ls && printf " \U000F17A9 " && pwd && return
-    elif [ -d "$1" ]; then
-      builtin cd "$1" && ls && printf " \U000F17A9 " && pwd
+    if (( $# == 0 )); then
+      builtin cd ~ && ls && printf " \U000F17A9 " && pwd || return
+    elif [[ -d $1 ]]; then
+      builtin cd "$1" && ls && printf " \U000F17A9 " && pwd || return
     else
-      z "$@" && ls && printf " \U000F17A9 " && pwd || echo "Error: Directory not found"
+      if ! z "$@" && pwd; then
+        echo "Error: Directory not found"
+        return 1
+      fi
+
+      printf "\U000F17A9 "
+      pwd
     fi
   }
 fi
 
-open() {
+open() (
   xdg-open "$@" >/dev/null 2>&1 &
-}
+)
 
 # Directories
 alias ..='cd ..'
@@ -31,6 +38,9 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 
 # Tools
+
+alias t='tmux attach || tmux new -s Work'
+
 
 # Git
 alias g='git'
