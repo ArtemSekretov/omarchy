@@ -3,4 +3,4 @@
 # omarchy:summary=Launch the Omarchy wifi controls (provided by the Impala TUI).
 
 rfkill unblock wifi
-exec setsid uwsm-app -- xdg-terminal-exec --app-id=org.omarchy.impala -e nmtui "$@"
+exec setsid uwsm-app -- xdg-terminal-exec -e nmtui "$@"
